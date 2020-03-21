@@ -1,0 +1,128 @@
+
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 2em;
+    font-family: $font-body, sans-serif;
+    
+    
+  }
+
+  main {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: $background-img, repeat-x;
+
+  }
+
+  figure {
+      
+    @include logo(400px, 190px, left, 50px);
+    
+  }
+
+  header {
+    width: inherit;
+  clear: both;
+  text-align: center;
+  padding-top: 40px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  h1 {
+    @include header($orange, 100, 4em);
+  }
+  h2 {
+    @include header($white, 900, 2.5em);
+    margin-bottom: 70px;
+  }
+  h3 {
+    @include header($chacoal, 400, 2em);
+    margin-bottom: 50px;
+  }
+
+  }
+
+
+#headline  {
+    @include content(100%, 130px, $salmon);
+    text-align: center;
+    margin: 0 auto;
+  h1 {
+    color: $white;
+    font-size: 2.5em;
+    font-weight: 100;
+    padding-top: 50px;
+  }
+}
+
+
+#content {
+    width: 940px;
+    margin: 20px auto;
+    h3 {
+      color: $chacoal;
+      font-size: 2em;
+      font-weight: 400;
+    }
+    #products {
+      width: 460px;
+      float: left;
+      img {
+        float: left;
+        margin-right: 20px;
+      }
+      article {
+        margin-bottom: 40px;
+      }
+      h4 {
+        line-height: 1em;
+      }
+    }
+    #testimonials {
+      width: 460px;
+      float: right;
+    }
+ 
+}
+
+.greybar {
+    @include footer(90px, $gray, 30px);
+    clear: both;
+  }
+  footer {
+    @include footer(120px, $chacoal, 50px);
+    text-align: center;
+    color: $white;
+  }
+  
+  $social-pos: (
+    one: 0,
+    two: -38px,
+    three: -76px,
+    four: -114px
+  );
+  .social-media {
+    margin: 0 auto;
+    width: 165px;
+    div {
+      float: left;
+      margin-right: 5px;
+    }
+    a {
+      display: block;
+      width: 36px;
+      height: 36px;
+      text-indent: -9999px;
+    }
+    @each $name, $value in $social-pos {
+      div.#{$name} {
+        background: $social-img $value 0;
+      }
+    }
+  }

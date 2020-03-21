@@ -1,0 +1,64 @@
+@mixin logo($width, $height, $float, $size) {
+    width: $width;
+    height: $height;
+    background: $logo-img no-repeat 0 $size;
+    float: $float;
+    display: block;
+    margin: 0;
+
+}
+
+
+
+@mixin nav($width, $height, $float) {
+        width: $width;
+        height: $height;
+        float: $float;        
+        text-align: right;
+
+}
+
+
+
+@mixin header($color, $weight, $size, $height: 0) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+  }
+
+@mixin content($width, $height, $background) {
+    width: $width;
+    height: $height;
+    background: $background;
+  }
+
+
+
+@mixin footer($height, $background, $padding-top, $width: 100%) {
+    width: $width;
+    height: $height;
+    background: $background;
+    padding-top: $padding-top;
+
+}
+
+@mixin clearfix {
+    &:before, &:after {
+        content: '';
+        display: table;
+
+    }
+    &:after {
+        clear: both;
+    }
+
+}
+
+@mixin break($width) {
+    
+        @media screen and  (max-width: $width) 
+                {
+            @content;
+        }
+    }
