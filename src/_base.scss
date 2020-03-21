@@ -7,6 +7,7 @@
     font-size: 1em;
     line-height: 2em;
     font-family: $font-body, sans-serif;
+    background: $background-img $white  repeat-x;
     
     
   }
@@ -15,7 +16,7 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-    background: $background-img, repeat-x;
+    // background: $background-img, repeat-x;
 
   }
 
